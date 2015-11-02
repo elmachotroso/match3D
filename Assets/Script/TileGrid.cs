@@ -180,30 +180,30 @@ public class TileGrid
     // Return the tile index given the tile data.
     public int GetTileIndex( TileData tileData )
     {
-    	int index = INVALID_INDEX;
-    	for( int i = 0; i < m_grid.Length; ++i )
-    	{
-    		if( m_grid[ i ] == tileData )
-    		{
-    			index = i;
-    			break;
-    		}
-    	}
-    	
-    	return index;
+        int index = INVALID_INDEX;
+        for( int i = 0; i < m_grid.Length; ++i )
+        {
+            if( m_grid[ i ] == tileData )
+            {
+                index = i;
+                break;
+            }
+        }
+        
+        return index;
     }
     
     // Retrieve the x, and y coords of the given tile data.
     public Vector2 GetTileCoords( TileData tileData )
     {
-    	Vector2 coords = new Vector2( INVALID_INDEX, INVALID_INDEX );
-    	int index = GetTileIndex( tileData );
-    	if( index != INVALID_INDEX )
-    	{
-    		coords = new Vector2( index % m_width, index / m_width );
-    	}
-    	
-    	return coords;
+        Vector2 coords = new Vector2( INVALID_INDEX, INVALID_INDEX );
+        int index = GetTileIndex( tileData );
+        if( index != INVALID_INDEX )
+        {
+            coords = new Vector2( index % m_width, index / m_width );
+        }
+        
+        return coords;
     }
     
     // Returns true if the specified tiles in tileIndex1 and tileIndex2 are
